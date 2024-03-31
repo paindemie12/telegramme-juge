@@ -194,7 +194,6 @@ function html2canva() {
     } else {
         playerName = document.getElementById("expediteur").value + "";
     }
-    element.style.background = "none";
     
     html2canvas(element, {
         width: width - 400,
