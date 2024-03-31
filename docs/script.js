@@ -192,10 +192,10 @@ function html2canva() {
     } else {
         playerName = document.getElementById("expediteur").value + "";
     }
-
+    
     html2canvas(element, {
-      width: width - 400,
-      height: height,
+        width: width - 400,
+        height: height,
     }).then(function (canvas) {
         let image = canvas.toDataURL("image/png");
 
