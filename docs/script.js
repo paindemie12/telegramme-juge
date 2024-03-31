@@ -185,8 +185,8 @@ function lcButton() {
 function html2canva() {
     let element = document.getElementById("zone-telechargement");
 
-    let width = element.scrollWidth;
-    let height = element.scrollHeight;
+    let width = 1163;
+    let height = 821;
 
     let playerName;
     if (!document.getElementById("expediteur").value) {
