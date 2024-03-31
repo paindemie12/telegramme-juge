@@ -183,7 +183,7 @@ function lcButton() {
 }
 
 function html2canva() {
-    let element = document.getElementById("zone-telechargement1");
+    let element = document.getElementById("zone-telechargement");
 
     let width = element.scrollWidth;
     let height = element.scrollHeight;
@@ -194,7 +194,8 @@ function html2canva() {
     } else {
         playerName = document.getElementById("expediteur").value + "";
     }
-
+    element.style.backgroundColor = "transparent";
+    
     html2canvas(element, {
         width: width - 400,
         height: height,
