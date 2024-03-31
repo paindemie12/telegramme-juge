@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Last Country - Télégrammes</title>
+    <script src="dom-to-image.min.js"></script>
+    <script src="script.js"></script>
+    <meta property="og:title" content="Last Country - Télégrammes" />
+    <meta property="og:type" content="Last Country" />
+    <meta property="og:site_name" content="Last Country - Télégrammes" />
+    <meta
+      property="og:image"
+      content="image/lastcountry2.png"
+    />
+    <link rel="icon" href="image/lastcountry2.png" />
+    <meta
+      property="og:description"
+      content="Créez vos télégrammes pour le serveur Last Country RedM facilement avec cet outil !"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css2.css" />
+    <link rel="stylesheet" href="css3.css" />
+    <script src="html2canvas.min2.js"></script>
+  </head>
+
+  <body>
+    <div class="formulaire" id="zone-telechargement">
+      <img
+        src="image/telegramme.png"
+        alt="telegramme"
+        class="photo"
+        id="zone-telechargement1"
+      />
+      <form action="" method="get" class="form" id="zone-telechargement2">
+        <div class="dde">
+          <input type="text" placeholder="Destinataire" />
+          <input type="text" class="date" id="currentDate" placeholder="Date" />
+          <select class="menu" id="select-menu" onchange="displayImage()">
+            <option value="envoyer">Envoyé depuis</option>
+            <option value="option1">Saint-Denis</option>
+            <option value="option2">Gouvernement</option>
+            <option value="option3">Rhodes</option>
+            <option value="option4">Annesburg</option>
+            <option value="option5">Van Horn</option>
+            <option value="option6">Emerald Station</option>
+            <option value="option7">Fort Wallace</option>
+            <option value="option8">Valentine</option>
+            <option value="option9">Wallace Station</option>
+            <option value="option10">Riggs Station</option>
+            <option value="option11">Strawberry</option>
+            <option value="option12">Blackwater</option>
+            <option value="option13">MacFarlane's Ranch</option>
+            <option value="option14">Fort Mercer</option>
+            <option value="option15">Armadillo</option>
+            <option value="option16">Thumbleweed</option>
+            <option value="option17">Benedict Point</option>
+            <option value="option18">Guarma</option>
+            <option value="option19">Sisika</option>
+          </select>
+          <div id="image-container">
+            <img
+              id="selected-image1"
+              src="image/lemoyne"
+            />
+          </div>
+        </div>
+        <fieldset class="texte">
+          <div id="redBg">
+            <div id="lcBg">
+              <div
+                contenteditable="true"
+                id="text"
+                class="text"
+                oninput="handleInput()"
+                ondrop="return false"
+                ondragover="return false"
+              ></div>
+            </div>
+          </div>
+        </fieldset>
+        <div>
+          <input
+            type="text"
+            class="expediteur"
+            id="expediteur"
+            placeholder="Expediteur"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="bouton">
+      <button onclick="demandedispoar()" class="custom-button">Demande de disponibilités (arrestation)</button>
+      <button onclick="juge()" class="custom-button">Juge</button>
+      <button onclick="toggleBold()" class="custom-button" id="boldButton">
+        <span class="material-symbols-outlined">format_bold</span>
+      </button>
+      <button
+        onclick="toggleUnderline()"
+        class="custom-button"
+        id="underlineButton"
+      >
+        <span class="material-symbols-outlined">format_underlined</span>
+      </button>
+      <button onclick="toggleItalic()" class="custom-button" id="italicButton">
+        <span class="material-symbols-outlined">format_italic</span>
+      </button>
+      <button onclick="increaseFontSize()" class="custom-button">
+        <span class="material-symbols-outlined">text_increase</span>
+      </button>
+      <button onclick="decreaseFontSize()" class="custom-button">
+        <span class="material-symbols-outlined">text_decrease</span>
+      </button>
+    </div>
+    <div class="impressionn">
+      <img
+        src="image/impression.png"
+        alt=""
+        class="imprimer"
+        onclick="html2canva()"
+      />
+    </div>
+    <div class="tampon">
+      <img
+        src="image/tamponrouge.png"
+        alt="tampon_rouge"
+        class="tampon_rouge"
+        onclick="redButton()"
+      />
+      <img
+        src="image/tamponlc.png"
+        alt=""
+        class="tampon_lc"
+        onclick="lcButton()"
+      />
+    </div>
+  </body>
+</html>
