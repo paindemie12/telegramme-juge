@@ -184,6 +184,7 @@ function lcButton() {
 
 function html2canva() {
     let element = document.getElementById("zone-telechargement");
+
     let width = 1163;
     let height = 821;
 
