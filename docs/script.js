@@ -192,7 +192,7 @@ function html2canva() {
     } else {
         playerName = document.getElementById("expediteur").value + "";
     }
-    
+
     html2canvas(element, {
         width: width - 400,
         height: height,
