@@ -196,7 +196,7 @@ function html2canva() {
     }
 
     html2canvas(element, {
-        width: width - 400,
+        width: width,
         height: height,
     }).then(function (canvas) {
         let image = canvas.toDataURL("image/png");
