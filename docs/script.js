@@ -112,7 +112,7 @@ function juge() {
 
   Êtes-vous disponible pour venir procéder au jugement ?
 
-  Cordialement,`;
+  Cordialement`;
 }
 
 function decreaseFontSize() {
