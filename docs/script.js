@@ -84,6 +84,16 @@ function increaseFontSize() {
     textDiv.style.fontSize = currentSize + 2 + "px";
 }
 
+function selectAction(action) {
+    switch (action) {
+        case "demandedispoar":
+            demandedispoar();
+            break;
+        default:
+            break;
+    }
+}
+
 function demandedispoar() {
     let textDiv = document.getElementById("text");
     textDiv.innerText = `Monsieur Northman,

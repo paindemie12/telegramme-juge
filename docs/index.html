@@ -100,7 +100,6 @@
       </form>
     </div>
     <div class="bouton">
-      <button onclick="demandedispoar()" class="custom-button">Demande de disponibilités (arrestation)</button>
       <button onclick="juge()" class="custom-button">Juge</button>
       <button onclick="toggleBold()" class="custom-button" id="boldButton">
         <span class="material-symbols-outlined">format_bold</span>
@@ -144,5 +143,9 @@
         onclick="lcButton()"
       />
     </div>
+    <select onchange="selectAction(this.value)" class="custom-select">
+      <option value="">Demande de disponibilités</option>
+      <option value="demandedispoar">Arrestation</option>
+    </select>
   </body>
 </html>
