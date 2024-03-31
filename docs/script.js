@@ -183,7 +183,7 @@ function lcButton() {
 }
 
 function html2canva() {
-    let element = document.getElementById("zone-telechargement");
+    let element = document.getElementById("zone-telechargement1");
 
     let width = element.scrollWidth;
     let height = element.scrollHeight;
