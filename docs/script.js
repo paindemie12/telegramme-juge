@@ -185,8 +185,8 @@ function lcButton() {
 function html2canva() {
     let element = document.getElementById("zone-telechargement");
 
-    let width = 1163;
-    let height = 821;
+    let width = element.scrollWidth;
+    let height = element.scrollHeight;
 
     let playerName;
     if (!document.getElementById("expediteur").value) {
@@ -196,7 +196,7 @@ function html2canva() {
     }
 
     html2canvas(element, {
-        width: width,
+        width: width - 400,
         height: height,
     }).then(function (canvas) {
         let image = canvas.toDataURL("image/png");
