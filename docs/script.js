@@ -732,10 +732,11 @@ function lcButton() {
 }
 
 function html2canva() {
-    let element = document.getElementById("zone-telechargement");
+    let element = document.getElementById("zone-telechargement1");
 
-    let width = element.scrollWidth;
-    let height = element.scrollHeight;
+    // Spécifiez les dimensions de l'image
+    let width = 1163; // largeur de l'image en pixels
+    let height = 821; // hauteur de l'image en pixels
 
     // Créer un nouveau canvas pour la capture d'écran
     let canvas = document.createElement("canvas");
@@ -744,6 +745,12 @@ function html2canva() {
 
     html2canvas(element, {
         canvas: canvas, // Utiliser le nouveau canvas créé
+        width: width, // Spécifiez la largeur du canvas
+        height: height, // Spécifiez la hauteur du canvas
+        x: 180, // Décalage horizontal par rapport à l'élément (en pixels)
+        y: 50, // Décalage vertical par rapport à l'élément (en pixels)
+        scrollX: 0, // Décalage horizontal de la capture (si nécessaire)
+        scrollY: 0, // Décalage vertical de la capture (si nécessaire)
     }).then(function (canvas) {
         let image = canvas.toDataURL("image/png");
 
@@ -754,12 +761,3 @@ function html2canva() {
         downloadLink.click();
     });
 }
-
-window.onload = () => {
-    let canvas = new Dessin("#feuille");
-
-    document.getElementById("clear").addEventListener("click", (e) => {
-        e.preventDefault();
-        canvas.clear();
-    });
-};
