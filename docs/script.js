@@ -754,3 +754,12 @@ function html2canva() {
         downloadLink.click();
     });
 }
+
+window.onload = () => {
+    let canvas = new Dessin("#feuille");
+
+    document.getElementById("clear").addEventListener("click", (e) => {
+        e.preventDefault();
+        canvas.clear();
+    });
+};
