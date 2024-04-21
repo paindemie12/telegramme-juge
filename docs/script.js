@@ -736,7 +736,7 @@ function html2canva() {
     let width = 1200;
     let height = 821;
 
-    let playerName = "test";
+    let playerName = "telegramme";
 
     html2canvas(element, {
         width: width + 400,
