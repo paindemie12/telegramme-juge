@@ -35,6 +35,67 @@
   </head>
 
   <body>
+    <select onchange="selectAction(this.value)" class="custom-select">
+      <option value="rien">Civil</option>
+      <option value="rien">--- Demande de disponibilités ---</option>
+      <option value="demandedispoar">Arrestation</option>
+      <option value="demandedispoli">Litige civil</option>
+      <option value="demandedispopr">Remise prime</option>
+      <option value="demandedispoad">Audience divorce</option>
+      <option value="demandedispopl">Plainte</option>
+      <option value="demandedisporv">Prise de rendez-vous</option>
+      <option value="rien">--- Wanted ---</option>
+      <option value="wantedan">Annonce de wanted</option>
+      <option value="rien">--- Demande de certificat ---</option>
+      <option value="demandead">Adoption</option>
+      <option value="demandemd">mariage manque document</option>
+      <option value="demandema">mariage</option>
+      <option value="demandeap">autorisation pavots</option>
+      <option value="demandedi">divorce</option>
+    </select>
+    <select onchange="selectAction(this.value)" class="custom-select">
+      <option value="rien">Pénitencier de Sisika</option>
+      <option value="rien">--- Demande ---</option>
+      <option value="sisikaem">Emprisonnement</option>
+      <option value="sisikatr">Travaux d'intérêt général</option>
+      <option value="sisikate">Travaux d'intérêt général et Emprisonnement</option>
+      <option value="rien">--- Vérification ---</option>
+      <option value="sisikavr">Verification réalisation de travaux</option>
+      <option value="sisikave">Verification réalisation de peine de prison</option>
+    </select>
+    <select onchange="selectAction(this.value)" class="custom-select">
+      <option value="rien">Ordre des Avocats</option>
+      <option value="rien">--- Demande ---</option>
+      <option value="avocatde">Recherche avocat pour comparution</option>
+      <option value="rien">--- Transfert de document ---</option>
+      <option value="avocatdp">Récupération procès-verbal</option>
+    </select>
+    <select onchange="selectAction(this.value)" class="custom-select">
+      <option value="rien">Ordre des Médecins</option>
+      <option value="rien">--- Demande ---</option>
+      <option value="medecinde">Suivi psychiatrique obligatoire</option>
+    </select>
+    <select onchange="selectAction(this.value)" class="custom-select">
+      <option value="rien">Force de l'ordre</option>
+      <option value="rien">--- Wanted ---</option>
+      <option value="wantedaw">Annonce wanted</option>
+      <option value="wantedae">Annonce wanted et non wanted</option>
+      <option value="wantedao">Annonce non wanted</option>
+      <option value="rien">--- Transfert de document ---</option>
+      <option value="comparutionma">Mandat de comparution</option>
+      <option value="rien">--- Vérification ---</option>
+      <option value="verificationcj">Casier judiciaire</option>
+    </select>
+    <select onchange="selectAction(this.value)" class="custom-select">
+      <option value="rien">Gouvernement</option>
+      <option value="rien">--- Département du trésor ---</option>
+      <option value="tresorfw">Fonds pour wanted</option>
+    </select>
+    <select onchange="selectAction(this.value)" class="custom-select">
+      <option value="rien">Mairie</option>
+      <option value="rien">--- Information ---</option>
+      <option value="mairieda">décret -> arrêté local </option>
+    </select>
     <div class="formulaire" id="zone-telechargement">
       <img
         src="image/telegramme.png"
@@ -44,7 +105,7 @@
       />
       <form action="" method="get" class="form" id="zone-telechargement2">
         <div class="dde">
-          <input type="text" placeholder="Destinataire" />
+          <input type="text" class="destinataire" id="destinataire" placeholder="Destinataire" />
           <input type="text" class="date" id="currentDate" placeholder="Date" />
           <select class="menu" id="select-menu" onchange="displayImage()">
             <option value="envoyer">Envoyé depuis</option>
@@ -67,6 +128,7 @@
             <option value="option17">Benedict Point</option>
             <option value="option18">Guarma</option>
             <option value="option19">Sisika</option>
+            <option value="option20">Palais de justice</option>
           </select>
           <div id="image-container">
             <img
@@ -74,6 +136,16 @@
               src="image/lemoyne.png"
             />
           </div>
+            <select class="expediteur" id="select-expediteur" onchange="displayImage2()">
+              <option value="expediteur">Expediteur</option>
+              <option value="option1">Andrew Bean</option>
+            </select>
+            <div id="image-container2">
+              <img
+                id="selected-image2"
+                src="image/lemoyne.png"
+              />
+            </div>
         </div>
         <fieldset class="texte">
           <div id="redBg">
@@ -89,26 +161,13 @@
             </div>
           </div>
         </fieldset>
-        <div>
-          <input
-            type="text"
-            class="expediteur"
-            id="expediteur"
-            placeholder="Expediteur"
-          />
-        </div>
       </form>
     </div>
     <div class="bouton">
-      <button onclick="juge()" class="custom-button">Juge</button>
       <button onclick="toggleBold()" class="custom-button" id="boldButton">
         <span class="material-symbols-outlined">format_bold</span>
       </button>
-      <button
-        onclick="toggleUnderline()"
-        class="custom-button"
-        id="underlineButton"
-      >
+      <button onclick="toggleUnderline()" class="custom-button"  id="underlineButton">
         <span class="material-symbols-outlined">format_underlined</span>
       </button>
       <button onclick="toggleItalic()" class="custom-button" id="italicButton">
@@ -143,9 +202,5 @@
         onclick="lcButton()"
       />
     </div>
-    <select onchange="selectAction(this.value)" class="custom-select">
-      <option value="">Demande de disponibilités</option>
-      <option value="demandedispoar">Arrestation</option>
-    </select>
   </body>
 </html>

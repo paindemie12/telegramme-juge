@@ -48,13 +48,6 @@ input {
     font-size: 23px;
     outline: none;
 }
-.expediteur {
-    position: relative;
-    top: 760px;
-    left: 950px;
-    width: 350px;
-    text-align: end;
-}
 .date {
     width: 200px;
 }
@@ -116,6 +109,23 @@ input {
     position: relative;
     z-index: 2;
 }
+.expediteur {
+    top: 500px;
+    right: 200px;
+    width: 310px;
+    height: 60px;
+    padding: 10px;
+    border: 0 solid #000;
+    border-radius: 15px;
+    background-color: transparent;
+    text-align: center;
+    font-family: "Courier Prime";
+    font-size: 23px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    z-index: 2;
+}
 #image-container {
     position: absolute;
     display: none;
@@ -127,6 +137,19 @@ input {
     height: auto;
     top: -220px;
     left: 565px;
+    z-index: 1;
+}
+#image-container2 {
+    position: absolute;
+    display: none;
+    justify-content: space-between;
+    width: 835px;
+}
+#selected-image2 {
+    width: 330px;
+    height: auto;
+    top: 320px;
+    left: 550px;
     z-index: 1;
 }
 select option:checked {
@@ -143,10 +166,9 @@ select option:checked {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto;
-    width: 150px;
-    top: 0px;
-    left: 0px;
+    height: 200px;
+    top: 675px;
+    left: 100px;
 }
 .custom-button {
     cursor: pointer;
@@ -159,7 +181,7 @@ select option:checked {
     position: relative;
     cursor: pointer;
     left: 1415px;
-    top: 675px;
+    top: 735px;
     transition: transform 0.3s ease-in-out;
 }
 .impressionn img:hover {
@@ -171,7 +193,7 @@ select option:checked {
     width: 340px;
     cursor: pointer;
     left: 1395px;
-    top: -130px;
+    top: -70px;
     transition: transform 0.3s ease-in-out;
 }
 .tampon_rouge:hover {
@@ -183,7 +205,7 @@ select option:checked {
     width: 340px;
     cursor: pointer;
     left: 1080px;
-    top: 210px;
+    top: 270px;
     transition: transform 0.3s ease-in-out;
 }
 .tampon_lc:hover {
@@ -191,11 +213,13 @@ select option:checked {
     transition: transform 0.3s ease-in-out;
 }
 .custom-select {
-    width: 250px; /* Ajustez la largeur selon vos besoins */
+    top: 0px;
+    width: 260px;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #ccc;
     font-size: 16px;
+    text-align: center;
     outline: none;
     cursor: pointer;
 }
