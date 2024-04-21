@@ -733,13 +733,13 @@ function lcButton() {
 
 function html2canva() {
     let element = document.getElementById("zone-telechargement");
-    let width = 1163;
+    let width = 1200;
     let height = 821;
 
     let playerName = "test";
 
     html2canvas(element, {
-        width: width,
+        width: width + 400,
         height: height,
     }).then(function (canvas) {
         let image = canvas.toDataURL("image/png");
