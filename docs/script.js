@@ -737,24 +737,20 @@ function html2canva() {
     let width = element.scrollWidth;
     let height = element.scrollHeight;
 
-    let playerName;
-    if (!document.getElementById("expediteur").value) {
-        playerName = "";
-    } else {
-        playerName = document.getElementById("expediteur").value + "";
-    }
+    // Créer un nouveau canvas pour la capture d'écran
+    let canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
 
     html2canvas(element, {
-        width: width - 400,
-        height: height,
+        canvas: canvas, // Utiliser le nouveau canvas créé
     }).then(function (canvas) {
         let image = canvas.toDataURL("image/png");
 
         // Crée un lien pour télécharger l'image PNG
         let downloadLink = document.createElement("a");
         downloadLink.href = image;
-        downloadLink.download =
-            playerName + "_" + new Date().getTime() + ".png";
+        downloadLink.download = "telegramme_" + new Date().getTime() + ".png";
         downloadLink.click();
     });
 }
