@@ -199,6 +199,12 @@ function selectAction(action) {
         case "verificationcj":
             verificationcj();
             break;
+        case "medecinve":
+            medecinve();
+            break;
+        case "verificationrt":
+            verificationrt();
+            break;
         case "rien":
             rien();
             break;
@@ -658,6 +664,38 @@ function verificationcj() {
     - Mr Gaston Blaize
 
     Je tiens à vous informer que aucune de ces deux personnes ne dispose de casiers judiciaires.
+
+    Avec mes respects
+    Cordialement
+    Juge Fédéral | Andrew Bean`;
+}
+
+function medecinve() {
+    let textDiv = document.getElementById("text");
+    textDiv.innerText = `Bonjour,
+
+    Suite à la fin de la période autorisée pour effectuer leur première séance de suivi avec un psychiatre au sein de l'Ordre des Médecins, pourriez-vous me confirmer si les personnes suivantes ont commencé leur suivi médical obligatoire :
+
+    - Rabios Castellanos
+
+    Dans l'attente de votre retour.
+
+    Avec mes respects
+    Cordialement
+    Juge Fédéral | Andrew Bean`;
+}
+
+function verificationrt() {
+    let textDiv = document.getElementById("text");
+    textDiv.innerText = `Bonjour,
+
+    Suite à la fin de la période autorisée pour effectuer leurs travaux d'intérêt général au sein du Bureau de New Hanover, veuillez me confirmer si les personnes suivantes ont effectué leurs travaux dans le délai imparti :
+
+    - Billy Timber
+    - Jack Moore
+    - Salata Domingo
+
+    Dans l'attente de votre retour.
 
     Avec mes respects
     Cordialement
