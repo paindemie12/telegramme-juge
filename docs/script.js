@@ -94,7 +94,7 @@ function displayImage2() {
         selectedImage.src = "image/bean_signature.png";
         selectElement.style.display = "none";
     } if (selectedOption === "option2") {
-        selectedImage.src = "";
+        selectedImage.src = "image/leroy_signature.png";
         selectElement.style.display = "none";
     } else if (selectedOption === "expediteur") {
         selectedImage.src = "";
